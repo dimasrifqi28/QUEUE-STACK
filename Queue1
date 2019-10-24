@@ -1,0 +1,33 @@
+package QueueProgram;
+import javax.swing.JOptionPane;
+public class Queue1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Queue Queue1 = new Queue(4);
+
+        int satu = Integer.parseInt(JOptionPane.showInputDialog("masukkan data satu : "));
+        Queue1.insert(satu);
+        Queue1.lihat();
+        int dua = Integer.parseInt(JOptionPane.showInputDialog("masukkan data dua : "));
+        Queue1.insert(dua);
+        Queue1.lihat();
+        int tiga = Integer.parseInt(JOptionPane.showInputDialog("masukkan data tiga : "));
+        Queue1.insert(tiga);
+        Queue1.lihat();
+        int empat = Integer.parseInt(JOptionPane.showInputDialog("masukkan data empat : "));
+        Queue1.insert(empat);
+        Queue1.lihat();
+
+        System.out.println("Data Keluar : ");
+        while (!Queue1.isEmpty()) {
+            long nilai = Queue1.remove();
+            JOptionPane.showMessageDialog(null, "Data keluar : " + nilai);
+            System.out.print(nilai + " ");
+        }
+        System.out.println();
+    }
+}
+
+
+
