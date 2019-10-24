@@ -1,0 +1,34 @@
+
+package ProgramStack;
+import javax.swing.JOptionPane;
+
+public class Stack1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Stack ProgramStack = new Stack(10);
+	        int satu = Integer.parseInt(JOptionPane.showInputDialog("masukkan data satu"));
+	        ProgramStack.push(satu);
+	        ProgramStack.baca();
+	        int dua = Integer.parseInt(JOptionPane.showInputDialog("masukkan data dua"));
+	        ProgramStack.push(dua);
+	        ProgramStack.baca();
+	        int tiga = Integer.parseInt(JOptionPane.showInputDialog("masukkan data tiga"));
+	        ProgramStack.push(tiga);
+	        ProgramStack.baca();
+	        int empat = Integer.parseInt(JOptionPane.showInputDialog("masukkan data empat"));
+	        ProgramStack.push(empat);
+	        ProgramStack.baca();
+
+	        System.out.println("data keluar");
+	        while (!ProgramStack.isEmpty()) {
+
+	            long nilai = ProgramStack.pop();
+	            JOptionPane.showMessageDialog(null, "Data keluar : " + nilai);
+	            System.out.print(nilai + " ");
+
+	        }
+	        System.out.println();
+	    }
+
+}
